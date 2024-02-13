@@ -156,8 +156,7 @@ http://127.0.0.1:8000/items/?search=pen
 
 
 ### Deployment
-'Using the docker file provided to create your own docker image and run on any platform that supports docker.
-'
+`Using the docker file provided to create your own docker image and run on any platform that supports docker.`
 
 ### Start Application
-'Application flow starts at http://localhost:8000/login/'
+`Application flow starts at http://localhost:8000/login/`
