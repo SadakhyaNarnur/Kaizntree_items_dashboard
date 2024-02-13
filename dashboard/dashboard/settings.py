@@ -148,4 +148,9 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGIN_URL = 'login'
 
-LOW_QUANTITY = 3
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'your-smtp-host'
+EMAIL_PORT = 'your-smtp-port'
+EMAIL_USE_TLS = True  # Or False if your SMTP server doesn't require TLS
+EMAIL_HOST_USER = 'your-email@example.com'
+EMAIL_HOST_PASSWORD = 'your-email-password'

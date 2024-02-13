@@ -1,6 +1,6 @@
-from django.urls import path, re_path
+from django.urls import path
 from Items import views
-from .views import Index,SignUpView, Dashboard, AddItem, EditItem, DeleteItem
+from .views import Index,SignUpView, Dashboard
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views as auth_views
@@ -8,9 +8,6 @@ from django.contrib.auth import views as auth_views
 urlpatterns=[
     path('', Index.as_view(), name='index'),
     path('dashboard/', Dashboard.as_view(), name='dashboard'),
-    path('add-item/', AddItem.as_view(), name='add-item'),
-    path('edit-item/<int:pk>', EditItem.as_view(), name='edit-item'),
-    path('delete-item/<int:pk>', DeleteItem.as_view(), name='delete-item'),
     path('items/',views.ItemApi,name="item-list"),
     path('items/<int:id>', views.ItemApi, name="item-id"),
     path('category/',views.CategoryApi,name="category-list"),

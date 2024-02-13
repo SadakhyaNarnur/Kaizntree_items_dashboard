@@ -9,4 +9,4 @@ class ItemSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model=Category
-        fields=('category_id','category_name')
+        fields='__all__'
