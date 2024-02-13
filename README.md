@@ -1,21 +1,24 @@
-# Kaizntree_items_dashboard
+# Kaizntree Inventory Management Service
 ### Api documentation
-Listing the items in the dashboard
-GET
-http://127.0.0.1:8000/items/
+#### Listing the items in the dashboard
+- 
+    **GET** 
+    http://127.0.0.1:8000/items/
 
-output:[
-    {
-        "SKU": "BWAX",
-        "Name": "BeesWax",
-        "Tags": "Etsy,Bing",
-        "category": 1,
-        "In_stock": "200.00",
-        "Available_stock": "50.00"
-    }
-]
-Adding a new item
-POST
+    **Output:**
+  ```json
+  [
+      {
+          "SKU": "BWAX",
+          "Name": "BeesWax",
+          "Tags": "Etsy,Bing",
+          "category": 1,
+          "In_stock": "200.00",
+          "Available_stock": "50.00"
+      }
+  ]
+#### Adding a new item
+**POST**
 http://127.0.0.1:8000/items/
 Body: {
         "SKU": "BWAX",
@@ -152,8 +155,9 @@ http://127.0.0.1:8000/items/?search=pen
 ]
 
 
-Deployment:
-Using the docker file provided to create your own docker image and run on any platform that supports docker.
+### Deployment
+'Using the docker file provided to create your own docker image and run on any platform that supports docker.
+'
 
-Application flow starts at http://localhost:8000/login/
-
+### Start Application
+'Application flow starts at http://localhost:8000/login/'
