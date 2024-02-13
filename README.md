@@ -1,4 +1,8 @@
 # Kaizntree Inventory Management Service
+
+### Why POSTGRESQL for inventory management dashboard
+I see PostgreSQL a great choice for this inventory management system. It is a popular open-source database that is widely used with Django and offers many advanced features, such as support for transactions, stored procedures, and triggers. It can scale well to large inventory data with multiple schemas for each client. It offers robust security features, including role-based access control (RBAC), SSL encryption for secure connections, data encryption capabilities, and support for auditing and logging. 
+
 ### Api documentation
 #### Listing the items in the dashboard
 - 
@@ -156,7 +160,7 @@ http://127.0.0.1:8000/items/?search=pen
 
 
 ### Deployment
-`Using the docker file provided to create your own docker image and run on any platform that supports docker.`
+- Using the docker file provided to create your own docker image and run on any platform that supports docker.
 
 ### Start Application
-`Application flow starts at http://localhost:8000/login/`
+- Application flow starts at http://localhost:8000/login/ 
