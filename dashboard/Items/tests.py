@@ -14,7 +14,7 @@ class ItemApiTestCase(TestCase):
 
         # Create sample items
         self.item1 = Itemlist.objects.create(SKU="SKU1", Name="Item 1", Tags="Tag1", category=2, In_stock=10, Available_stock=5, user=2)
-        self.item2 = Itemlist.objects.create(SKU="SKU2", Name="Item 2", Tags="Tag2", category=2, In_stock=20, Available_stock=15, user=2)
+        self.item2 = Itemlist.objects.create(SKU="SKU2", Name="Item 2", Tags="Tag2", category=2, In_stock=20, Available_stock=15,user=2)
 
     def test_get_all_items(self):
         response = self.client.get(reverse('item-list'))
@@ -33,8 +33,8 @@ class CategoryApiTestCase(TestCase):
         self.client = Client()
 
         # Create sample categories
-        self.category1 = Category.objects.create(category_id="cid1",category_name="Category 1")
-        self.category2 = Category.objects.create(category_id="cid2",category_name="Category 2")
+        self.category1 = Category.objects.create(category_name="Category 1")
+        self.category2 = Category.objects.create(category_name="Category 2")
 
     def test_get_all_categories(self):
         response = self.client.get(reverse('category-list'))
@@ -52,13 +52,13 @@ class CountsApiTestCase(TestCase):
     def setUp(self):
         self.client = Client()
 
+        # Create sample categories
+        Category.objects.create(category_name="Category 1")
+        Category.objects.create(category_name="Category 2")
+
         # Create sample items
         self.item1 = Itemlist.objects.create(SKU="SKU1", Name="Item 1", Tags="Tag1", category=2, In_stock=10, Available_stock=5, user=2)
-        self.item2 = Itemlist.objects.create(SKU="SKU2", Name="Item 2", Tags="Tag2", category=2, In_stock=20, Available_stock=15, user=2)
-
-        # Create sample categories
-        Category.objects.create(category_id="cid1",category_name="Category 1")
-        Category.objects.create(category_id="cid2",category_name="Category 2")
+        self.item2 = Itemlist.objects.create(SKU="SKU2", Name="Item 2", Tags="Tag2", category=2, In_stock=20, Available_stock=15,user=2)
 
     def test_counts_api(self):
         response = self.client.get(reverse('counts-api'))
